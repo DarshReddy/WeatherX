@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Roboto">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">?textColorDark</item>
+    </style>
+
+    <style name="Roboto.Black">
+        <item name="android:fontFamily">@font/roboto_black</item>
+    </style>
+
+    <style name="Roboto.Thin">
+        <item name="android:fontFamily">@font/roboto_thin</item>
+    </style>
+
+    <style name="Roboto.Thin.Blue">
+        <item name="android:textColor">?textColorBlue</item>
+    </style>
+
+    <style name="Roboto.Thin.Blue.Big">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="Roboto.Black.Huge">
+        <item name="android:textSize">96sp</item>
+    </style>
+
+</resources>

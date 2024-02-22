@@ -3,6 +3,9 @@
     <style name="Base.Theme.WeatherX" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="background">@color/off_white</item>
+        <item name="textColorDark">@color/text_color_dark</item>
+        <item name="textColorBlue">@color/text_color_blue</item>
     </style>
 
     <style name="Theme.WeatherX" parent="Base.Theme.WeatherX" />

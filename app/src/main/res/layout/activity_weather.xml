@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@color/off_white"
     tools:context=".ui.WeatherActivity">
 
     <TextView
@@ -46,9 +45,9 @@
         android:id="@+id/rv_forecasts"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/white"
         android:elevation="4dp"
         android:paddingHorizontal="16dp"
+        android:theme="@style/Theme.WeatherX.White"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

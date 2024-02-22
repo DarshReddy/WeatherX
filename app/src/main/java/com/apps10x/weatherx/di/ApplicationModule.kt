@@ -20,7 +20,7 @@ class ApplicationModule {
 
     @Singleton
     @Provides
-    fun providesOkHttpClient() = OkHttpClient
+    fun providesOkHttpClient(): OkHttpClient = OkHttpClient
         .Builder()
         .connectTimeout(10, TimeUnit.SECONDS)
         .writeTimeout(10, TimeUnit.SECONDS)

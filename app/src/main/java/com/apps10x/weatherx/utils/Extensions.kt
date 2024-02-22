@@ -38,30 +38,19 @@ fun View?.showIndefiniteSnackBarWithAction(message: String, action: String, onAc
 suspend inline fun <reified T : Any> doSafeApiRequest(
     crossinline call: suspend () -> Response<*>,
 ): ApiResult<T> {
-    var apiResponse: Response<*>? = null
     return try {
         call.invoke().let { response ->
-            apiResponse = response
             if (response.isSuccessful) {
                 ApiResult.Success(response.body() as? T)
             } else {
-                ApiResult.Error(
-                    statusCode = response.code(),
-                    error = null
-                )
+                ApiResult.Error(error = response.message())
             }
         }
     } catch (e: Exception) {
         return if (e is UnknownHostException)
-            ApiResult.Error(
-                statusCode = 100,
-                error = "There is no internet connection. Connect to the internet and try again."
-            )
+            ApiResult.Error(error = "There is no internet connection. Connect to the internet and try again.")
         else {
-            ApiResult.Error(
-                statusCode = apiResponse?.code(),
-                error = null
-            )
+            ApiResult.Error(error = null)
         }
     }
 }

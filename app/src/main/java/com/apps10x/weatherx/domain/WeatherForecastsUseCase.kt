@@ -53,7 +53,7 @@ class WeatherForecastsUseCase @Inject constructor(private val weatherRepository:
 
                 ApiResult.Success(data = listDailyWeatherForecast)
             } ?: run {
-                ApiResult.Error(null, error = NO_DATA_ERROR)
+                ApiResult.Error(error = NO_DATA_ERROR)
             }
         } else {
             forecasts as? ApiResult.Error

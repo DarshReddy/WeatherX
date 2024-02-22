@@ -1,5 +1,6 @@
 package com.apps10x.weatherx.network
 
+import com.apps10x.weatherx.BuildConfig
 import com.apps10x.weatherx.data.WeatherForecastResponse
 import com.apps10x.weatherx.data.WeatherResponse
 import retrofit2.Response

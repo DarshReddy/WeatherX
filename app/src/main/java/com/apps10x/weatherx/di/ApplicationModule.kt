@@ -1,5 +1,6 @@
 package com.apps10x.weatherx.di
 
+import com.apps10x.weatherx.BuildConfig
 import com.apps10x.weatherx.network.WeatherApiService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

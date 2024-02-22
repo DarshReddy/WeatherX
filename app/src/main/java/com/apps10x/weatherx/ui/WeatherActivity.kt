@@ -58,7 +58,7 @@ class WeatherActivity : AppCompatActivity() {
                     binding.tvTemperature.setTextAndShow(
                         getString(
                             R.string.temperature_celsius,
-                            it.data?.main?.tempCelsius?.toInt()
+                            it.data?.temperatureData?.tempCelsius?.toInt()
                         )
                     )
                     binding.tvCity.setTextAndShow(it.data?.city)

@@ -30,7 +30,9 @@ fun View?.showIndefiniteSnackBarWithAction(message: String, action: String, onAc
             .setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE)
             .setAction(action) {
                 onAction.invoke()
-            }.setActionTextColor(Color.RED)
+            }
+            .setTextColor(Color.BLACK)
+            .setActionTextColor(Color.RED)
             .show()
     }
 }

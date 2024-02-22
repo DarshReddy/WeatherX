@@ -9,14 +9,14 @@ import retrofit2.http.Query
 
 interface WeatherApiService {
 
-    @GET("/weather")
-    fun getWeatherToday(
+    @GET("weather")
+    suspend fun getWeatherToday(
         @Query("APPID") apiKey: String = BuildConfig.appId,
         @Query("q") city: String,
     ): Response<WeatherResponse>
 
-    @GET("/forecast")
-    fun getWeatherForecast(
+    @GET("forecast")
+    suspend fun getWeatherForecast(
         @Query("APPID") apiKey: String = BuildConfig.appId,
         @Query("q") city: String,
     ): Response<WeatherForecastResponse>

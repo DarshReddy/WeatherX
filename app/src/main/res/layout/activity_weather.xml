@@ -5,7 +5,9 @@
     android:id="@+id/weather_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeatherActivity">
+    android:animateLayoutChanges="true"
+    android:background="@color/off_white"
+    tools:context=".ui.WeatherActivity">
 
     <TextView
         android:id="@+id/tv_temperature"
@@ -14,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:textAlignment="center"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,19 +28,41 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_temperature"
         tools:text="Bengaluru" />
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_forecasts"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="62dp"
+        android:background="@color/white"
+        android:elevation="4dp"
         android:paddingHorizontal="16dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_city" />
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        tools:listitem="@layout/item_weather_forecast" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

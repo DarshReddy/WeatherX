@@ -4,8 +4,13 @@ import com.squareup.moshi.Json
 
 data class Temperature(
     @Json(name = "temp")
-    val tempKelvin: Double?
+    val tempKelvin: Double
 ) {
-    val tempCelsius: Int?
-        get() = (tempKelvin?.minus(273.15))?.toInt()
+
+    companion object {
+        private const val KELVIN_TO_CELSIUS = 273.15
+    }
+
+    val tempCelsius: Double
+        get() = tempKelvin.minus(KELVIN_TO_CELSIUS)
 }
